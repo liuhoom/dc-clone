@@ -5,8 +5,6 @@ import { UserButton } from '@clerk/nextjs'
 export default async function HomePage() {
   const user = await initialProfile()
 
-  console.log(user)
-  
   return (
     <div className=''>
       <UserButton />
