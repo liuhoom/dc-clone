@@ -60,10 +60,8 @@ export function InitModal() {
     }
   }
 
-  new FileReader
-
   return (
-    <Dialog open>
+    <Dialog open={false}>
       <DialogContent className='p-0 items-center overflow-hidden'>
         <DialogHeader className='px-6 pt-8'>
           <DialogTitle className='text-center text-2xl font-semibold'>

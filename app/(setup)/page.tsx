@@ -1,8 +1,15 @@
 import { InitModal } from '@/components/init-modal'
+import { initialProfile } from '@/lib/initial-profile'
+import { UserButton } from '@clerk/nextjs'
 
-export default function HomePage() {
+export default async function HomePage() {
+  const user = await initialProfile()
+
+  console.log(user)
+  
   return (
     <div className=''>
+      <UserButton />
       <InitModal />
     </div>
   )

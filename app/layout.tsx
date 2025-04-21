@@ -27,8 +27,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         <body className={inter.className}>
           <ThemeProvider
             attribute='class'
-            defaultTheme='system'
-            enableSystem
+            defaultTheme='dark'
             disableTransitionOnChange
             enableColorScheme
           >
