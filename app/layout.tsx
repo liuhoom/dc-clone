@@ -5,7 +5,6 @@ import type { PropsWithChildren } from 'react'
 
 import { siteConfig } from '@/config'
 import { ThemeProvider } from '@/components/providers/theme-provider'
-import { Navbar } from '@/components/navbar'
 
 import './globals.css'
 
@@ -33,7 +32,6 @@ export default function RootLayout({ children }: PropsWithChildren) {
             disableTransitionOnChange
             enableColorScheme
           >
-            <Navbar />
             {children}
           </ThemeProvider>
         </body>

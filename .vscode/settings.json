@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Default Dark+",
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "security.workspace.trust.untrustedFiles": "open",
@@ -13,7 +13,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabSize": 2,
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.cursorSmoothCaretAnimation": "on",
   "files.eol": "\n",
 
