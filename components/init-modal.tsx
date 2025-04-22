@@ -61,7 +61,7 @@ export function InitModal() {
   }
 
   return (
-    <Dialog open={false}>
+    <Dialog open={true}>
       <DialogContent className='p-0 items-center overflow-hidden'>
         <DialogHeader className='px-6 pt-8'>
           <DialogTitle className='text-center text-2xl font-semibold'>

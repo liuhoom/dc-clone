@@ -7,7 +7,7 @@ export function UserButton() {
     <ClerkUserButton
       appearance={{
         elements: {
-          avatarBox: 'h-[48px] w-[48px]',
+          avatarBox: 'h-[42px] w-[42px]',
         },
       }}
       userProfileMode='navigation'

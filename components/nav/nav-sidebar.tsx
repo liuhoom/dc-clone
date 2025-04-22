@@ -19,7 +19,7 @@ export async function NavigationSidebar() {
 
   if (!profile) redirect('/')
 
-  const servers = db.server.findMany({
+  const servers = await db.server.findMany({
     where: {
       members: {
         some: {
@@ -28,6 +28,8 @@ export async function NavigationSidebar() {
       },
     },
   })
+
+  console.log(servers)
 
   return (
     <div className='flex flex-col items-center h-full w-full py-3 text-primary space-y-4 dark:bg-[#1E1F22] bg-[#E3E5E8]'>
@@ -47,7 +49,7 @@ export async function NavigationSidebar() {
 
       <ScrollArea className='flex-1 w-full'>
         {/* @ts-ignore */}
-        {/* {servers?.map((server) => (
+        {servers.map((server) => (
           <div className='mb-4' key={server.id}>
             <NavigationItem
               id={server.id}
@@ -55,13 +57,12 @@ export async function NavigationSidebar() {
               name={server.name}
             />
           </div>
-        ))} */}
-        <div className=''>hehed</div>
+        ))}
       </ScrollArea>
 
       <ModeSwitcher />
 
-      <div className='flex flex-col items-center justify-center pb-4 mt-auto gap-y-4'>
+      <div className='flex flex-col items-center justify-center pb-3 mt-auto gap-y-4'>
         <Link href='https://github.com' target='_blank'>
           <Github className='w-8 h-8' />
         </Link>
