@@ -29,8 +29,6 @@ export async function NavigationSidebar() {
     },
   })
 
-  console.log(servers)
-
   return (
     <div className='flex flex-col items-center h-full w-full py-3 text-primary space-y-4 dark:bg-[#1E1F22] bg-[#E3E5E8]'>
       <Link href='/'>

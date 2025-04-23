@@ -1,17 +1,17 @@
 import { NavigationSidebar } from '@/components/nav/nav-sidebar'
 
-export default function ComponentName({
+export default function MainLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <div className=''>
-      <aside className='hidden md:flex h-full w-[72px] fixed inset-y-0'>
+    <div className='h-full'>
+      <aside className='hidden md:flex h-full w-[72px] fixed inset-y-0 z-30'>
         <NavigationSidebar />
       </aside>
 
-      <div className='md:ml-[72px] h-full'>{children}</div>
+      <main className='md:ml-[72px] h-full'>{children}</main>
     </div>
   )
 }
