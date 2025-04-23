@@ -23,8 +23,8 @@ import {
   FormMessage,
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
-import { FileUpload } from './file-upload'
-import { Button } from './ui/button'
+import { FileUpload } from '../file-upload'
+import { Button } from '../ui/button'
 
 const formSchema = z.object({
   name: z.string().min(1, {
@@ -61,7 +61,7 @@ export function InitModal() {
   }
 
   return (
-    <Dialog open={true}>
+    <Dialog open>
       <DialogContent className='p-0 items-center overflow-hidden'>
         <DialogHeader className='px-6 pt-8'>
           <DialogTitle className='text-center text-2xl font-semibold'>

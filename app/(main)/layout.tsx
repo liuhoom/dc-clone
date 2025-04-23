@@ -7,7 +7,7 @@ export default function ComponentName({
 }) {
   return (
     <div className=''>
-      <aside className='hidden md:flex h-full w-[72px] bg-zinc-800 fixed flex-col inset-y-0'>
+      <aside className='hidden md:flex h-full w-[72px] fixed inset-y-0'>
         <NavigationSidebar />
       </aside>
 

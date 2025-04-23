@@ -5,6 +5,7 @@ import type { PropsWithChildren } from 'react'
 
 import { siteConfig } from '@/config'
 import { ThemeProvider } from '@/components/providers/theme-provider'
+import { ModalProvider } from '@/components/providers/modal-provider'
 
 import './globals.css'
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
             disableTransitionOnChange
             enableColorScheme
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
