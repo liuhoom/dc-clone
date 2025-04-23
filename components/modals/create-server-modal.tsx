@@ -2,10 +2,11 @@
 
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { useRouter } from 'next/navigation'
 import * as z from 'zod'
+import axios from 'axios'
 
 import { useModal } from '@/hooks/use-modal'
-import axios from 'axios'
 
 import {
   Dialog,
@@ -20,12 +21,12 @@ import {
   FormControl,
   FormField,
   FormItem,
+  FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { useRouter, redirect } from 'next/navigation'
 import { FileUpload } from '../file-upload'
 import { Input } from '@/components/ui/input'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 
 const formSchem = z.object({
   name: z.string().min(1, {
@@ -52,13 +53,13 @@ export function CreateServerModal() {
 
   const isLoading = form.formState.isLoading
 
-  const onsubmit = async (values: z.infer<typeof formSchem>) => {
+  const onSubmit = async (values: z.infer<typeof formSchem>) => {
     try {
-      await axios.post('/api/server', values)
+      await axios.post('/api/servers', values)
 
       form.reset()
       router.refresh()
-      window.location.reload()
+      onClose()
     } catch (error) {
       console.error('Create Server Error:', error)
     }
@@ -85,12 +86,12 @@ export function CreateServerModal() {
 
         <Form {...form}>
           <form
-            onSubmit={form.handleSubmit(onsubmit)}
+            onSubmit={form.handleSubmit(onSubmit)}
             autoCapitalize='off'
             autoComplete='off'
           >
-            <div className='space-y-8'>
-              <div className=''>
+            <div className='space-y-8 px-6'>
+              <div className='flex items-center justify-center text-center'>
                 <FormField
                   name='imageUrl'
                   control={form.control}
@@ -98,7 +99,7 @@ export function CreateServerModal() {
                     <FormItem>
                       <FormControl>
                         <FileUpload
-                          endpoint='serverImage'
+                          endpoint='messageFile'
                           onChange={field.onChange}
                           value={field.value}
                         />
@@ -115,6 +116,7 @@ export function CreateServerModal() {
                 control={form.control}
                 render={({ field }) => (
                   <FormItem>
+                    <FormLabel>Server Name</FormLabel>
                     <FormControl>
                       <Input
                         disabled={isLoading}
