@@ -24,9 +24,9 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form'
-import { FileUpload } from '../file-upload'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import { FileUpload } from '@/components/file-upload'
 
 const formSchem = z.object({
   name: z.string().min(1, {
@@ -87,6 +87,7 @@ export function CreateServerModal() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
+            className='space-y-8'
             autoCapitalize='off'
             autoComplete='off'
           >
@@ -98,11 +99,14 @@ export function CreateServerModal() {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <FileUpload
-                          endpoint='messageFile'
+                        {/* Bugs: did not show Navigation sidebar. 20250424*/}
+
+                        {/* <FileUpload
+                          endpoint='serverImage'
                           onChange={field.onChange}
                           value={field.value}
-                        />
+                        /> */}
+                        <div className=''>ddd</div>
                       </FormControl>
 
                       <FormMessage />
@@ -116,9 +120,12 @@ export function CreateServerModal() {
                 control={form.control}
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Server Name</FormLabel>
+                    <FormLabel className='uppercase text-xs font-bold text-zinc-500'>
+                      Server Name
+                    </FormLabel>
                     <FormControl>
                       <Input
+                        className='dark:bg-zinc-300/10 bg-zinc-300/50 border-0 dark:text-white text-black'
                         disabled={isLoading}
                         aria-disabled={isLoading}
                         placeholder='enter your server name'
@@ -132,7 +139,7 @@ export function CreateServerModal() {
               />
             </div>
 
-            <DialogFooter>
+            <DialogFooter className='px-6 py-4'>
               <Button
                 variant='primary'
                 disabled={isLoading}

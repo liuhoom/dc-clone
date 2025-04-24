@@ -1,76 +1,8 @@
 {
   "workbench.colorTheme": "Default Dark+",
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-  "security.workspace.trust.untrustedFiles": "open",
-  "files.associations": {
-    "*.lua": "lua",
-    "*.py": "python"
-  },
-  "files.autoSave": "afterDelay",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.tabSize": 2,
   "editor.fontSize": 14,
-  "editor.cursorSmoothCaretAnimation": "on",
-  "files.eol": "\n",
-
-  "window.commandCenter": false,
-  "files.exclude": {
-    "**/.git": false
-  },
-  "search.exclude": {
-    "**/*.snap": true,
-    "**/*.svg": true,
-    "**/.git": true,
-    "**/.github": false,
-    "**/.nuxt": true,
-    "**/.output": true,
-    "**/.pnpm": true,
-    "**/.vscode": true,
-    "**/.yarn": true,
-    "**/assets": true,
-    "**/bower_components": true,
-    "**/dist/**": true,
-    "**/logs": true,
-    "**/node_modules": true,
-    "**/out/**": true,
-    "**/package-lock.json": true,
-    "**/pnpm-lock.yaml": true,
-    "**/public": true,
-    "**/temp": true,
-    "**/yarn.lock": true,
-    "**/CHANGELOG*": true,
-    "**/LICENSE*": true
-  },
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.jsxSingleQuote": true,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
-  "workbench.editorAssociations": {
-    "*.xlsx": "default"
-  },
-
-  "git.confirmSync": false,
-  "git.suggestSmartCommit": false,
-
-  "tailwindCSS.emmetCompletions": true,
-
-  "emmet.useInlineCompletions": true,
-  "emmet.syntaxProfiles": {},
-  "emmet.showSuggestionsAsSnippets": true,
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "vue-html": "html",
-    "plaintext": "html"
-  },
-
-  "commentTranslate.source": "Bing",
-  "commentTranslate.hover.enabled": true,
-  "commentTranslate.hover.string": true,
-  "commentTranslate.hover.variable": true,
-  "commentTranslate.targetLanguage": "zh-CN"
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.wordWrapColumn": 80,
+  "editor.rulers": [80]
 }
