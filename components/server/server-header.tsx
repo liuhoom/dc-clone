@@ -32,7 +32,6 @@ export function ServerHeader({ server, role }: ServerHeaderProps) {
   const isAdmin = role === MemberRole.ADMIN
   const isModerator = isAdmin || role === MemberRole.MODERATOR
 
-  console.log(isAdmin, isModerator)
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
