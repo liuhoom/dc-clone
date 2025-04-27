@@ -106,7 +106,7 @@ export function CreateServerModal() {
                           onChange={field.onChange}
                           value={field.value}
                         /> */}
-                        <div className=''>ddd</div>
+                        <div className=''>Bug</div>
                       </FormControl>
 
                       <FormMessage />
