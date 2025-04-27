@@ -8,7 +8,6 @@ import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ModalProvider } from '@/components/providers/modal-provider'
 
 import './globals.css'
-import { CreateServerModal } from '@/components/modals/create-server-modal'
 
 const inter = Inter({ subsets: ['latin'], weight: '600' })
 export const metadata: Metadata = siteConfig
@@ -25,7 +24,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
         },
       }}
     >
-      <html lang='en'>
+      <html lang='en' suppressHydrationWarning>
         <body className={inter.className}>
           <ThemeProvider
             attribute='class'

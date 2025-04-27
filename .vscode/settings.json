@@ -1,8 +1,8 @@
 {
   "workbench.colorTheme": "Default Dark+",
-  "editor.tabSize": 2,
-  "editor.fontSize": 14,
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
-  "editor.rulers": [80]
+  "editor.rulers": [80],
+  "editor.minimap.enabled": true,
+  "editor.minimap.autohide": true
 }

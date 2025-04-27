@@ -30,7 +30,7 @@ export async function NavigationSidebar() {
   })
 
   return (
-    <div className='flex flex-col items-center h-full w-full py-3 text-primary space-y-4 dark:bg-[#1E1F22] bg-[#E3E5E8]'>
+    <div className='flex flex-col items-center h-full w-full py-3 text-primary space-y-4 dark:bg-[#1E1F22] bg-[#E3E5E8] z-50'>
       <Link href='/'>
         <Image
           src='/logo.png'

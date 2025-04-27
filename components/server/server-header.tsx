@@ -43,14 +43,20 @@ export function ServerHeader({ server, role }: ServerHeaderProps) {
 
       <DropdownMenuContent className='w-56 text-xs font-medium text-black space-y-[2px] dark:text-neutral-400'>
         {isModerator && (
-          <DropdownMenuItem className='px-3 py-2 text-sm cursor-pointer text-indigo-600 dark:text-indigo-400'>
+          <DropdownMenuItem
+            className='px-3 py-2 text-sm cursor-pointer text-indigo-600 dark:text-indigo-400'
+            onClick={() => onOpen('invite', { server })}
+          >
             Invite People
             <UserPlus className='h-4 w-4 ml-auto' />
           </DropdownMenuItem>
         )}
 
         {isAdmin && (
-          <DropdownMenuItem className='px-3 py-2 text-sm cursor-pointer'>
+          <DropdownMenuItem
+            onClick={() => onOpen('editServer', { server })}
+            className='px-3 py-2 text-sm cursor-pointer'
+          >
             Server Settings
             <Settings className='h-4 w-4 ml-auto' />
           </DropdownMenuItem>
