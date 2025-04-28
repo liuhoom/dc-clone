@@ -2,9 +2,10 @@
 
 import { X } from 'lucide-react'
 import Image from 'next/image'
-import '@uploadthing/react/styles.css'
 
 import { UploadDropzone } from '@/lib/uploadthing'
+
+// import '@uploadthing/react/styles.css'
 
 interface FileUploadProps {
   value: string
@@ -17,7 +18,7 @@ export function FileUpload({ endpoint, value, onChange }: FileUploadProps) {
 
   if (fileType !== 'pdf' && value) {
     return (
-      <div className=''>
+      <div className='relative h-20 w-20'>
         <Image src={value} className='rounded-full' alt='server image' fill />
         <button
           className='bg-rose-500 text-white p-1 rounded-full absolute top-0 right-0 shadow-sm'
@@ -35,7 +36,7 @@ export function FileUpload({ endpoint, value, onChange }: FileUploadProps) {
       className='border-zinc-500 ut-button:bg-indigo-500 ut-button:ut-uploading:bg-indigo-500/70 after:ut-button:ut-uploading:bg-indigo-500 ut-label:text-indigo-500 hover:ut-label:text-indigo-500/70'
       endpoint={endpoint}
       onClientUploadComplete={(res) => {
-        onChange(res?.[0].ufsUrl)
+        onChange(res?.[0].url)
       }}
       onUploadError={(error) => {
         console.error('File Upload Error: ', error)

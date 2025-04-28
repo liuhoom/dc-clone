@@ -101,11 +101,11 @@ export function CreateServerModal() {
                       <FormControl>
                         {/* Bugs: did not show Navigation sidebar. 20250424*/}
 
-                        {/* <FileUpload
+                        <FileUpload
                           endpoint='serverImage'
                           onChange={field.onChange}
                           value={field.value}
-                        /> */}
+                        />
                         <div className=''>Bug</div>
                       </FormControl>
 

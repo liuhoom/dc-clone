@@ -109,11 +109,11 @@ export function EditServerModal() {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        {/* <FileUpload
+                        <FileUpload
                           value={field.value}
                           endpoint='serverImage'
                           onChange={field.onChange}
-                        /> */}
+                        />
                         <div className=''>Bug</div>
                       </FormControl>
                       <FormMessage />
