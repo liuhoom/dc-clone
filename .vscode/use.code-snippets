@@ -1,0 +1,99 @@
+{
+  // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+  // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+  // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+  // used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+  // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+  // Placeholders with the same ids are connected.
+  // Example:
+  // "Print to console": {
+  // 	"scope": "javascript,typescript",
+  // 	"prefix": "log",
+  // 	"body": [
+  // 		"console.log('$1');",
+  // 		"$2"
+  // 	],
+  // 	"description": "Log output to console"
+  // }
+  "Customer - Customer Component": {
+    "prefix": "crrf",
+    "body": [
+      "'use client'",
+      "",
+      "interface ${1:ComponentName}Props {",
+      "}",
+      "",
+      "export function ${1:ComponentName}({}: ${1:ComponentName}Props) {",
+      "  return (",
+      "    <div className=''>",
+      "      ",
+      "    </div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "自定义snippet"
+  },
+  "Customer - Page Component": {
+    "prefix": "prrf",
+    "body": [
+      "",
+      "export default function ${1:ComponentName}() {",
+      "  return (",
+      "    <div className=''>",
+      "      ",
+      "    </div>",
+      "  )",
+      "}",
+      ""
+    ],
+    "description": "自定义snippet"
+  },
+  "Customer - Layout Component": {
+    "prefix": "lrrf",
+    "body": [
+      "",
+      "export default function ${1:ComponentName}({",
+      " children,",
+      "}: {",
+      " children: React.ReactNode",
+      "}) {",
+      " return <div className=''>{children}</div>",
+      "}",
+      ""
+    ],
+    "description": "自定义snippet"
+  },
+  "Customer - try-catch-finaly block": {
+    "prefix": "tcf",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (error) {",
+      "\tconsole.error('Error: ', error);",
+      "} finally {",
+      "\t$3",
+      "}"
+    ],
+    "description": "Generate a try-catch-finally code block"
+  },
+  "Customer - console log": {
+    "prefix": "clog",
+    "body": ["", "  console.log($1)", ""],
+    "description": "Console log"
+  },
+  "Customer - console error": {
+    "prefix": "cerror",
+    "body": ["", "  console.error($1)", ""],
+    "description": "Console error"
+  },
+  "Customer - route get": {
+    "prefix": "GET",
+    "body": [
+      "import { type NextRequest, NextResponse } from 'next/server'",
+      "",
+      "export async function GET(req: NextRequest) {}"
+    ],
+    "description": "APP route route GET"
+  }
+}

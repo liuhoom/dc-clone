@@ -3,7 +3,8 @@
 import { CreateServerModal } from '@/components/modals/create-server-modal'
 import { InviteModal } from '@/components/modals/invite-modal'
 import { EditServerModal } from '@/components/modals/edit-server-modal'
-import { MemebersModal } from '../modals/members-modal'
+import { MemebersModal } from '@/components/modals/members-modal'
+import { CreateChannelModal } from '@/components/modals/create-channel-modal'
 
 export function ModalProvider() {
   return (
@@ -12,6 +13,7 @@ export function ModalProvider() {
       <InviteModal />
       <EditServerModal />
       <MemebersModal />
+      <CreateChannelModal />
     </>
   )
 }

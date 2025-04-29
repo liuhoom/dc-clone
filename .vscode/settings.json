@@ -4,5 +4,6 @@
   "editor.wordWrapColumn": 80,
   "editor.rulers": [80],
   "editor.minimap.enabled": true,
-  "editor.minimap.autohide": true
+  "editor.minimap.autohide": true,
+  "editor.formatOnSave": true
 }
