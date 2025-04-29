@@ -57,6 +57,8 @@ export function CreateChannelModal({}: CreateChannelModalProps) {
   const isModalOpen = isOpen && type === 'createChannel'
   const { channelType } = data
 
+  console.log(channelType)
+
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -147,7 +149,11 @@ export function CreateChannelModal({}: CreateChannelModalProps) {
                       Channel type
                     </FormLabel>
 
-                    <Select>
+                    <Select
+                      disabled={isLoading}
+                      onValueChange={field.onChange}
+                      defaultValue={field.value}
+                    >
                       <FormControl>
                         <SelectTrigger className='bg-zinc-300/50 dark:bg-zinc-300/10 capitalize'>
                           <SelectValue placeholder='Select a channel type' />
