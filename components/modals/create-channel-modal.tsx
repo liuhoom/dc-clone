@@ -70,6 +70,8 @@ export function CreateChannelModal({}: CreateChannelModalProps) {
   useEffect(() => {
     if (channelType) form.setValue('type', channelType)
     else form.setValue('type', ChannelType.TEXT)
+
+    console.log(form.getValues('type'))
   }, [channelType, form])
 
   const isLoading = form.formState.isSubmitting
