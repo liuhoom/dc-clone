@@ -52,7 +52,7 @@ export function ServerSearch({ data }: ServerSearchProps) {
   }) => {
     setOpen(false)
     if (type === 'channel')
-      router.push(`/servers/${params.serverId}/channels/${id}`)
+      router.push(`/servers/${params?.serverId}/channels/${id}`)
   }
 
   return (
