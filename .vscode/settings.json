@@ -1,9 +1,18 @@
 {
-  "workbench.colorTheme": "Default Dark+",
+  "workbench.colorTheme": "Default Dark Modern",
   "editor.wordWrap": "wordWrapColumn",
   "editor.wordWrapColumn": 80,
   "editor.rulers": [80],
   "editor.minimap.enabled": true,
   "editor.minimap.autohide": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "workbench.sideBar.location": "right",
+
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "workbench.tree.indent": 10,
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.multiCursorModifier": "ctrlCmd"
 }
