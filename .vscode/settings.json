@@ -12,7 +12,6 @@
   "terminal.integrated.cursorStyle": "line",
   "workbench.tree.indent": 10,
 
-  "editor.cursorSmoothCaretAnimation": "on",
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
   "editor.multiCursorModifier": "ctrlCmd"
 }
